@@ -1,0 +1,104 @@
+Chapter 3. 
+
+3A. Vector Space of Linear Maps
+
+===================================================
+
+Linear Transformation T : V -> W
+
+       T
+  au  --->   aT(u) 
++ bv  ---> + bT(v) 
+
+List of famous Linear Transformations
+              0 :    V -> W
+              I :    V -> V
+differentiation : P(R) -> P(R)
+    integration : P(R) -> R
+     mul by x^2 : P(R) -> P(R)
+     
+===================================================
+
+Every Linear Map F^n -> F^m has 
+this form of Linear Transformation with A(j,k) in F
+
+[       x(1) , ... ,       x(n) ]
+            
+       -> (linear map) -> 
+   
+[ A(1,1)x(1) + ... + A(1,n)x(n) ]
+[              ...              ] 
+[ A(m,1)x(1) + ... + A(m,n)x(n) ] 
+
+===================================================
+
+Linear Map Lemma 
+
+v(1) ... v(n) : basis of V
+w(1) ... w(n) : in W
+
+then 
+exists unique linear map T: V->W
+
+      T
+v(k) ---> w(k)
+
+===================================================
+
+Proof of Linear Map Lemma : Uniqueness
+
+suppose linear map T : V -> W 
+
+                 T 
+            v_k --->             w_k  
+       (c_k)v_k --->        (c_k)w_k : by Homogeneity
+sum of (c_k)v_k ---> sum of (c_k)w_k : by Additivity
+
+===================================================
+
+Proof of Linear Map Lemma : Exstence
+
+                 T
+sum of (c_k)v_k ---> sum of (c_k)w_k
+
+(1) well-defined : v(k) has unique w(k)
+
+(2) Tv(k) = w(k) : c(k) = 1 and other c's = 0
+
+(3) Additivity
+
+                             T 
+  u =    sum of [ a_k ] v_k --->   sum of [ a_k ] w_k  =   Tu 
++ v    + sum of [ c_k ] v_k      + sum of [ c_k ] w_k    + Tv 
+
+(4) Homogeneity
+
+                          T 
+    sum of (a * c_k) v_k --->     sum of (a * c_k) w_k 
+= a sum of (c_k) v_k          = a sum of     (c_k) w_k
+= a v                         = a T(v)  
+
+===================================================
+
+(aS + bT)v = a(Sv) + b(Tv)   --- operations on L(V,W) (pointwise)
+(aS + bT) is linear          --- closure
+axioms inherited from W      --- pointwise
+
+∴ L(V,W) is a vector space   --- (id = 0 map)
+
+===================================================
+
+linear map  T : U -> V       T       S 
+linear map  S : V -> W    u ---> Tu ---> S(Tu)
+
+                                 ST 
+linear map ST : U -> W    u -----------> S(Tu)
+
+we need to prove that (ST) is linear
+
+===================================================
+
+
+       
+
+
