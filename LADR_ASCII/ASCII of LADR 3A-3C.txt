@@ -80,7 +80,10 @@ sum of (c_k)v_k ---> sum of (c_k)w_k
 
 ===================================================
 
+( S +  T)v =   Sv +    Tv    --- addition
+(aS     )v = a(Sv)           --- scalar multiplication
 (aS + bT)v = a(Sv) + b(Tv)   --- operations on L(V,W) (pointwise)
+
 (aS + bT) is linear          --- closure
 axioms inherited from W      --- pointwise
 
@@ -97,6 +100,24 @@ linear map ST : U -> W    u -----------> S(Tu)
 we need to prove that (ST) is linear
 
 ===================================================
+
+ associativity (AB)C = A(BC)
+      identity    TI = IT = T
+distributivity (A+B)C  = AC + BC 
+                A(B+C) = AB + AC 
+
+   C       A+B 
+u ---> Cu -----> (A+B)(Cu)
+                 = A(Cu) + B(Cu)
+                 = (AC)u + (BC)u
+
+      AC+BC 
+u -------------> (AC+BC)(u)
+                 = (AC)u + (BC)u
+
+===================================================
+
+
 
 
        
