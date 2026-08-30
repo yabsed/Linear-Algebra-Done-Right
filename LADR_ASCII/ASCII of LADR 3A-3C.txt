@@ -117,9 +117,97 @@ u -------------> (AC+BC)(u)
 
 ===================================================
 
+ST = TS can fail (non-commutativity)
+
+      D             T          
+  p  --->    p'(x) ---> x^2 p'(x)
+
+      T             D 
+p(x) ---> x^2 p(x) ---> x^2 p'(x) + 2x p(x) 
+
+===================================================
+
+  if T is Linear Map 
+then T(0) = 0 
+
+       T   
+0 + 0 ---> T(0) + T(0)            
+    0 ---> T(0)
+
+===================================================
+
+3B. Null Spaces and Ranges
 
 
+===================================================
 
-       
+linear map T: V->W 
+nullT = {v : Tv = 0} is a subspace of V 
 
+     id : T(0) = 0         --- includes 0
+closure : T(u+v) = Tu + Tv 
+                 =  0 +  0 --- addition 
+           T(au) =   a(Tu)
+                 =   a( 0) --- scalar multiplication
+
+===================================================
+
+linear map T: V->W 
+is injective iff (Tu = Tv then   u =  v)
+             iff ( u != v then Tu != Tv)
+             iff (null T = {0})
+
+        (inj) null includes 0
+              ; v != 0 then Tv != 0
+              ; nullT = {0}
+
+(nullT = {0}) suppose Tu = Tv 
+              ; 0 = Tu - Tv = T(u-v)
+              ; null = {0} includes u-v
+              ; u = v
+
+===================================================
+
+linear map T:V->W 
+rangeT = { Tv } is a subspace of W 
+
+   T               T                  T
+0 ---> 0; w1      <--- v1      ;  w <---  v
+             + w2 <---      v2 ; aw <--- av 
+          w1 + w2 <--- v1 + v2 
+
+id; closure
+
+===================================================
+
+linear map T:V->W 
+is surjective iff (rangeT = W)
+
+===================================================
+
+Fundamental Theorem of Linear Maps 
+
+dimV = dim nullT + dim rangeT 
+
+basis of null T  : {u1 ... um} 
+basis of      V  : {u1 ... um} union { v1 ...  vn}
+                        ↓             ↓      ↓
+basis of range T :     {0,}          {Tv1 ... Tvn}
+
+===================================================
+
+Claim : {Tv1 ... Tvn} is independent
+
+                       suppose  c1Tv1  + ... + cnTvn = 0
+                                  ↑             ↑
+nullT = span{u1...um} includes c1(v1) + ... + cn(vn)                                
+
+; c1v1 + ... cnvn = d1u1 + ... + dmum 
+; c's = 0
+
+since u1,..um,v1...vn is linearly independent
+
+===================================================
+
+Map to a 
 
