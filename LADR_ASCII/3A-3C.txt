@@ -338,8 +338,6 @@ A(*,k) = column k of A ; m-by-1 matrix
 
 ===================================================
 
-Matrix multiplication
-
 basis of U = {u_1 ... u_p}
 basis of V = {v_1 ... v_n}
 basis of W = {w_1 ... w_m}
@@ -360,6 +358,8 @@ u_k --->   [ B(1,k) ] v_1
 + [ A(m,1) ]            w_m +     + [ A(m,n) ]            w_m  --->  [ (AB)(m,k) ] w_m
 
 ===================================================
+
+Definition of Matrix multiplication
 
 A m-by-n
 B n-by-p 
@@ -416,3 +416,71 @@ then (CR)(*,k) = CR(*,k)
      (CR)(j,*) = C(j,*)R 
                = C(j,1)R(1,*) + ... + C(j,c)R(c,*) --- combination of rows 
 
+===================================================
+
+Column-Row factorization and Rank 
+
+ (i) column rank : dim span { A(*,1) ... A(*,n) } in F^(m,1) 
+(ii)    row rank : dim span { A(1,*) ... A(m,*) } in F^(1,n)
+
+column rank <= n (only n columns)
+            <= m (subspace of F^(m,1))
+
+===================================================
+
+  A : m-by-n 
+A^t : n-by-m (transpose) with (A^t)(k,j) = A(j,k)
+
+  (i) (A+B)^t =      (A^t) + (B^t)
+ (ii) ( kA)^t =     k(A^t)
+(iii) ( AC)^t = (C^t)(A^t)
+
+===================================================
+
+suppose  (i)  m-by-n matrix A (in F) 
+        (ii) column rank of A >= 1
+
+then exist m-by-c matrix C (in F)
+           c-by-n matrix R (in F)
+
+with A = CR 
+
+===================================================
+
+Step 1. Construct C
+
+   reduce columns A(*,1) ... A(*,n) 
+   into basis of its span 
+
+   basis has length c --- column rank
+
+Step 2. Construct R 
+
+   A(*,k) = linear combination 
+                   of columns of C
+
+   A(*,k) = CR(*,k) --- coefficients of 
+                        linear combination
+
+===================================================
+
+rank A := column rank of A 
+        =    row rank of A
+
+===================================================
+
+Proof. 
+
+assume c >= 1 (otherwise A = 0)
+
+consider A = CR 
+
+row rank A <= c = column rank A --- every row in A 
+                                    is a linear combination of the 
+                                    c rows of R 
+
+column rank A  =    row rank (A^t)
+              <= column rank (A^t)
+               =    row rank  A
+
+===================================================
