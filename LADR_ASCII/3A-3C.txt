@@ -370,21 +370,49 @@ defined iff   (# columns of A)
             = (#    rows of B)
 
 with
-
 (AB)(j,k) = sum of A(j,r)B(r,k) ---    row j of A 
                                     column k of B
 
                  = A(j,*)B(*,k) --- row times column
 
+∴ M(ST) = M(S)M(T)
+
 ===================================================
 
-then M(ST) = M(S)M(T)
+(AB)(*,k) = AB(*,k), (AB)(j,*) = A(j,*)B 
+
+Ab = b_1 A(*,1) + ... + b_n A(*,n)
+aB = a_1 B(1,*) + ... + a_n B(n,*)
+
+===================================================
 
 Matrix multiplication is not commutative (AB != BA)
                but it is distributive and associative. 
 
 ===================================================
 
+A m-by-n ; b = [ b_1 ]
+               [ ... ]
+               [ b_n ]
+                                      
+then Ab = [ sum of A(1,k)b_k ] = [ A(1,1) ] b_1 + ... + [ A(n,1) ] b_n 
+          [       ....       ]   [  ....  ]             [  ....  ]
+          [ sum of A(m,k)b_k ]   [ A(m,1) ]             [ A(m,n) ]
+                                     ↓                     ↓
+                                   A(*,1)                 A(*,n)
+                              
+        ∴ linear combination of columns 
 
+===================================================
 
+Product as linear combinations of Columns or Rows
+
+C m-by-c
+R c-by-n
+
+then (CR)(*,k) = CR(*,k) 
+               = R(1,k)C(*,1) + ... + R(c,k)C(*,c) --- combination of columns 
+
+     (CR)(j,*) = C(j,*)R 
+               = C(j,1)R(1,*) + ... + C(j,c)R(c,*) --- combination of rows 
 
