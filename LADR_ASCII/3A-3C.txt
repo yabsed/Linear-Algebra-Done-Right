@@ -138,13 +138,12 @@ then T(0) = 0
 
 3B. Null Spaces and Ranges
 
-
 ===================================================
 
 linear map T: V->W 
 nullT = {v : Tv = 0} is a subspace of V 
 
-     id : T(0) = 0         --- includes 0
+     id :   T(0) = 0       --- includes 0
 closure : T(u+v) = Tu + Tv 
                  =  0 +  0 --- addition 
            T(au) =   a(Tu)
@@ -153,12 +152,12 @@ closure : T(u+v) = Tu + Tv
 ===================================================
 
 linear map T: V->W 
-is injective iff (Tu = Tv then   u =  v)
+is injective iff (Tu = Tv then   u =  v) --- definition
              iff ( u != v then Tu != Tv)
              iff (null T = {0})
 
-        (inj) null includes 0
-              ; v != 0 then Tv != 0
+        (inj) null includes 0       --- T(0) = T(0) + T(0)
+              ; v != 0 then Tv != 0 --- injectivity
               ; nullT = {0}
 
 (nullT = {0}) suppose Tu = Tv 
@@ -171,9 +170,9 @@ is injective iff (Tu = Tv then   u =  v)
 linear map T:V->W 
 rangeT = { Tv } is a subspace of W 
 
-   T               T                  T
+   T                T                 T
 0 ---> 0; w1      <--- v1      ;  w <---  v
-             + w2 <---      v2 ; aw <--- av 
+               w2 <---      v2 ; aw <--- av 
           w1 + w2 <--- v1 + v2 
 
 id; closure
@@ -209,5 +208,71 @@ since u1,..um,v1...vn is linearly independent
 
 ===================================================
 
-Map to a 
+  if dim V > dim W 
+then linear map T : V->W is not injective (finite-dimensional)
 
+                                    "null T"
+basis of V : { u_1 ...  u_m} union { ... u_n} (cannot be {}) 
+                ↓      ↓            ↓ 
+basis of W : {Tu_1 ... Tu_m}         {0,}
+
+===================================================
+
+  if dim V < dim W 
+then linear map T : V->W is not surjective (finite-dimensional)
+
+basis of V : {  u_1 ...   u_m } 
+                 ↓        ↓
+basis of W : { Tu_1 .... Tu_m } union { ... v_n}
+                  "range T"
+
+===================================================
+
+linear map T : V->V (finite-dimensional)
+
+T injective iff       nullT = {0}
+            iff dim range T = dim V
+            iff     range T = V
+            iff           T surjective 
+
+===================================================
+
+Systems of Linear equations
+
+       fix A(j,k) ∈ F 
+and define T : F^n -> F^m 
+
+                T  
+sum of x_k e_k ---> sum of x_k [ A(1, k) ] = [ sum of A(1,k) x_k ]
+                               [   ...   ]   [        ...        ]
+                               [ A(m, k) ]   [ sum of A(m,k) x_k ]
+                        
+           e_k ---> [ A(1, k) ]
+                    [   ...   ]
+                    [ A(m, k) ]    
+
+  (i) {0} ⊆ null T 
+
+ (ii) nonzero solution exists iff null T ⊋ {0}
+                              iff T not injective 
+
+(iii) system with 
+      more variables then equations (n > m) 
+      has nonzero solutions
+
+      because T is not injective
+
+ (iv) no solution            iff range T != F^m 
+      for some choice of c   iff T not surjective 
+                                       
+      [ sum of A(1,k) x_k ]   [ c_1 ]  
+      [        ...        ] = [ ... ] means Tx = (c1, ... cm)
+      [ sum of A(m,k) x_k ]   [ c_m ] 
+
+  (v) system with 
+      more equations then variables (m > n)
+      has no solution for some choice of the constatn terms 
+
+      because T is not surjective. 
+
+===================================================
