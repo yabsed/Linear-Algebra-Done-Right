@@ -276,3 +276,73 @@ sum of x_k e_k ---> sum of x_k [ A(1, k) ] = [ sum of A(1,k) x_k ]
       because T is not surjective. 
 
 ===================================================
+
+3C. Matrices
+
+Matrix of a linear map 
+
+===================================================
+
+m-by-n matrix A in F 
+
+
+     [A(1,1) ... A(1,n)]
+A =  [       ...       ]
+     [A(m,1) ... A(m,n)]
+
+A(j,k) = entry in row j, column k 
+
+===================================================
+
+linear map T : V->W 
+
+basis of V = {v_1,...v_n}
+basis of W = {w_1,...w_m}
+
+M(T) is the m-by-n matrix
+defined by 
+
+     T                  M(T)
+v_k --->   A(1,k) w_1  -----> column k of M(T) 
+         + ...
+         + A(m,k) w_m  
+
+M(T) depends on bases as well as on T
+
+===================================================
+
+For matrices of the same size, entrywise: 
+
+(A+C)(j,k) =  A(j,k) + C(j,k) --- addition 
+( aA)(j,k) = aA(j,k)          --- scalar multiplication
+
+===================================================
+
+For linear maps S,T:V->W and k in F 
+
+M(S+T) = M(S) +  M(T) --- addition  
+M( kT) =        kM(T) --- scalar multiplication
+
+===================================================
+
+ let     F^(m,n) = {m-by-n matrices on F}
+then dim F^(m,n) = mn 
+
+===================================================
+
+Matrix multiplication
+
+u_k --->   [ B(1,k) ] v_1
+         + [  ....  ]  
+         + [ B(n,k) ] v_n
+
+               S ↓                 
+
++ [ A(1,1) ]            w_1 + ... + [ A(1,n) ]            w_1
++ [  ....  ]                +     + [  ....  ]    
++ [ A(j,1) ] [ B(1,k) ] w_j + ... + [ A(j,n) ] [ B(n,k) ] w_j ---> (AB)(j,k) = sum of A(j,r)B(r,k) w_j 
++ [  ....  ]                +     + [  ....  ]   
++ [ A(m,1) ]            w_m +     + [ A(m,n) ]            w_m
+
+===================================================
+
