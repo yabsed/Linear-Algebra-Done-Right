@@ -299,13 +299,12 @@ linear map T : V->W
 basis of V = {v_1,...v_n}
 basis of W = {w_1,...w_m}
 
-M(T) is the m-by-n matrix
-defined by 
+M(T) is the m-by-n matrix defined by 
 
-     T                  M(T)
-v_k --->   A(1,k) w_1  -----> column k of M(T) 
-         + ...
-         + A(m,k) w_m  
+     T                  
+v_k --->   [ A(1,k) ] w_1  ---> column k of M(T) 
+         + [  ....  ]
+         + [ A(m,k) ] w_m  
 
 M(T) depends on bases as well as on T
 
@@ -330,19 +329,62 @@ then dim F^(m,n) = mn
 
 ===================================================
 
-Matrix multiplication
+Rows, columns, and products
 
-u_k --->   [ B(1,k) ] v_1
-         + [  ....  ]  
-         + [ B(n,k) ] v_n
+m-by-n matrix A
 
-               S ↓                 
-
-+ [ A(1,1) ]            w_1 + ... + [ A(1,n) ]            w_1
-+ [  ....  ]                +     + [  ....  ]    
-+ [ A(j,1) ] [ B(1,k) ] w_j + ... + [ A(j,n) ] [ B(n,k) ] w_j ---> (AB)(j,k) = sum of A(j,r)B(r,k) w_j 
-+ [  ....  ]                +     + [  ....  ]   
-+ [ A(m,1) ]            w_m +     + [ A(m,n) ]            w_m
+A(j,*) =    row j of A ; 1-by-n matrix
+A(*,k) = column k of A ; m-by-1 matrix 
 
 ===================================================
+
+Matrix multiplication
+
+basis of U = {u_1 ... u_p}
+basis of V = {v_1 ... v_n}
+basis of W = {w_1 ... w_m}
+
+              T      S 
+linear map U ---> V ---> W  with M(S) = A , M(T) = B
+
+u_k --->   [ B(1,k) ] v_1
+             + [  ....  ]  
+                 + [ B(n,k) ] v_n
+
+                  S ↓                 
+                                                                I
++ [ A(1,1) ]            w_1 + ... + [ A(1,n) ]            w_1  --->  [ (AB)(1,k) ] w_1 
++ [  ....  ]                +     + [  ....  ]                       [    ...    ]
++ [ A(j,1) ] [ B(1,k) ] w_j + ... + [ A(j,n) ] [ B(n,k) ] w_j  --->  [ (AB)(j,k) ] w_j 
++ [  ....  ]                +     + [  ....  ]                       [    ...    ]
++ [ A(m,1) ]            w_m +     + [ A(m,n) ]            w_m  --->  [ (AB)(m,k) ] w_m
+
+===================================================
+
+A m-by-n
+B n-by-p 
+
+then AB is the m-by-p matrix 
+
+defined iff   (# columns of A)
+            = (#    rows of B)
+
+with
+
+(AB)(j,k) = sum of A(j,r)B(r,k) ---    row j of A 
+                                    column k of B
+
+                 = A(j,*)B(*,k) --- row times column
+
+===================================================
+
+then M(ST) = M(S)M(T)
+
+Matrix multiplication is not commutative (AB != BA)
+               but it is distributive and associative. 
+
+===================================================
+
+
+
 
