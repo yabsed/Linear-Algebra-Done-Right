@@ -40,15 +40,15 @@ Proof.
 
 (has inverse)  
 
-                             T      T^(-1)
- injectivity : multiple v's ---> w --------> single v 
+                  T      T^(-1)
+ injectivity : v ---> w --------> !v 
 
                     T^(-1)        T
 surjectivity : ∀w --------> ∃v ---> w
 
 ======================================
 
-(T is both injective and surjective)
+(T is bijection)
 
           T
     ∃!v ---> ∀w 
