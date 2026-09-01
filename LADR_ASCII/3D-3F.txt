@@ -219,11 +219,11 @@ Linear maps as matrix multiplication
 
 ======================================
 
-                basis of V 
-                    |
-  if v =   [ b_1 ] v_1 
-         + [ ... ]
-         + [ b_n ] v_n
+                 basis of V 
+                     |
+  if v =    [ b_1 ] v_1 
+          + [ ... ]
+          + [ b_n ] v_n
 
 then M(v) = [ b_1 ] ∈ F^(n,1)
             [ ... ]
@@ -236,3 +236,34 @@ isomorphism V ---> F^(n,1)
 
 ======================================
 
+      T
+v_k ---> T(v_k) =   [ A(1,k) ] w_1
+                  + [  ....  ]
+                  + [ A(m,k) ] w_m
+
+  column k of M(T)        matrix of the vector T(v_k)
+         ↓                            ↓
+    [ A(1,k) ]                    [ A(1,k) ]
+    [  ....  ]         =          [  ....  ]
+    [ A(m,k) ]                    [ A(m,k) ]
+
+∴ M(T)(*,k) = M T(v_k)
+
+======================================
+
+∀v :   M(Tv)    =       M(T)M(v)
+      linear map   matrix multiplication 
+
+ v =   [ b_1 ] v_1 
+     + [ ... ]
+     + [ b_n ] v_n 
+
+Tv =   [ b_1 ] T(v_1) 
+     + [ ... ]
+     + [ b_n ] T(v_n)
+
+M(Tv) =   [ b_1 ] M T(v_1) =   [ b_1 ] M(T)(*,1) = M(T)M(v)
+        + [ ... ]            + [ ... ]
+        + [ b_n ] M T(v_n)   + [ b_n ] M(T)(*,n)
+
+======================================
