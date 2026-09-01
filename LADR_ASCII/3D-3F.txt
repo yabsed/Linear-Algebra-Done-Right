@@ -77,19 +77,27 @@ surjectivity : ∀w --------> ∃v ---> w
 
 (S is linear : additivity)
 
-               T
-  Sw1 + Sw2  ---> TSw1 + TSw2 = w1 + w2 --- additivity of T ; TS = I
-  S(w1 + w2) --->               w1 + w2 --- TS = I
+    consider TS = I (on W)
 
-; S(w1 + w2) = Sw1 + Sw2 --- injectivity of T
+             S               T
+    w1 + w2 ---> S(w1 + w2) ---> w1 + w2
+
+                             T
+                 Sw1 + Sw2  ---> TSw1 + TSw2 = w1 + w2
+
+    therefore S(w1 + w2) = Sw1 + Sw2 by injectivity of T
 
 (S is linear : homogeneity)
 
-          T
-  a(Sw)  ---> a(TSw) = aw --- homogeneity of T ; TS = I
-  S(aw)  --->          aw --- TS = I
+    consider TS = I (on W)
 
-; S(aw) = a(Sw) --- injectivity of T
+        S          T
+    aw ---> S(aw) ---> aw
+
+                   T
+            a(Sw) ---> a(TSw) = aw
+
+    therefore S(aw) = a(Sw) by injectivity of T
 
 ======================================
               
