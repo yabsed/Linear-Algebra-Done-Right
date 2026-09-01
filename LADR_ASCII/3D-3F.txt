@@ -98,5 +98,53 @@ surjectivity : ∀w --------> ∃v ---> w
     therefore S(aw) = a(Sw) by injectivity of T
 
 ======================================
-              
-         
+
+dim V = dim W (finite dimensional)
+
+linear map T: V->W 
+
+then T invertible iff T injective 
+                  iff T surjective 
+
+because
+
+dim V = dim null T  + dim range T --- Fundamental Theorem
+
+  n   =     0       +      n
+        (injective)   (surjective)
+
+either alone gives bijection, hence invertible 
+
+======================================
+
+dim V = dim W (finite dimensional)
+
+linear map S: W->V 
+           T: V->W 
+
+then ST = I (on V) iff TS = I (on W)
+
+(in case of W = V, we have ST = TS = I)
+
+because suppose ST = I (on V) 
+
+   T      S
+v ---> 0 ---> 0
+  null   zero
+
+      ST 
+v ----------> v 
+   identity
+
+nullT = {0} --- T injective & surjective & invertible 
+
+(ST)(T^(-1)) = (I)(T^(-1))
+(S )         =    (T^(-1))
+
+therefore TS = (T)(T^(-1)) = I
+
+======================================
+
+
+
+
