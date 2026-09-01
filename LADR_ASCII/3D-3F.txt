@@ -145,6 +145,28 @@ therefore TS = (T)(T^(-1)) = I
 
 ======================================
 
+Isomorphic vector spaces 
 
+ (i) isomorphism is an invertible linear map 
+
+(ii) V≅W (isomorphic) 
+     iff some isomorphism V->W exists 
+
+======================================
+
+(fin-dim V, W over F)
+
+V≅W iff dim V = dim W 
+
+======================================
+
+(⇒) 
+
+dim V =  dim null T + dim range T --- Fundamental Theorem (isomorphism T)
+
+dim V =      0      +    dim W 
+        (injective)   (surjective) 
+
+(⇐)
 
 
