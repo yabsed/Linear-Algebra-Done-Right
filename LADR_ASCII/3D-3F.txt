@@ -36,8 +36,6 @@ iff T is injective & surjective
 
 ======================================
 
-Proof. 
-
 (has inverse)  
 
                   T      T^(-1)
@@ -48,12 +46,12 @@ surjectivity : ∀w --------> ∃v ---> w
 
 ======================================
 
-(T is bijection)
+(T is bijection; define S: W->V)
 
-          T
-    ∃!v ---> ∀w 
+          T        S         
+    ∃!v ---> ∀w ---> ∃!v
 
-(define S : W->V)
+(TS = I: W->W)
 
           T        S         T
     ∃!v ---> ∀w ---> ∃!v ---> w 
