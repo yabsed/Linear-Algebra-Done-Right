@@ -46,11 +46,50 @@ Proof.
                     T^(-1)        T
 surjectivity : ∀w --------> ∃v ---> w
 
+======================================
 
-(injective & surjective)
+(T is both injective and surjective)
 
+          T
+    ∃!v ---> ∀w 
 
-S exisits such that 
+(define S : W->V)
+
+          T        S         T
+    ∃!v ---> ∀w ---> ∃!v ---> w 
+
+                        I   
+              ∀w -------------> w 
+
+    therefore TS = I (on W) by definition of S 
+
+(ST = I: V->V)
+
+    consider TS = I (on W)
+
+         T      S         T 
+    ∀v ---> w ---> (??) ---> w   
+
+                          T 
+                      !v ---> w
+
+    therefore ST = I (on V) by injectivity of T
+
+(S is linear : additivity)
+
+               T
+  Sw1 + Sw2  ---> TSw1 + TSw2 = w1 + w2 --- additivity of T ; TS = I
+  S(w1 + w2) --->               w1 + w2 --- TS = I
+
+; S(w1 + w2) = Sw1 + Sw2 --- injectivity of T
+
+(S is linear : homogeneity)
+
+          T
+  a(Sw)  ---> a(TSw) = aw --- homogeneity of T ; TS = I
+  S(aw)  --->          aw --- TS = I
+
+; S(aw) = a(Sw) --- injectivity of T
 
 ======================================
               
