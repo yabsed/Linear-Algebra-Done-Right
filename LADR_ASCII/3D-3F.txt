@@ -1,0 +1,57 @@
+======================================
+
+3D - Invertibility and Isomorphisms
+
+Invertible linear maps 
+
+======================================
+
+linear map T : V->W is invertible 
+
+iff exists linear map S : W->V (inverse of T)
+
+with ST = I : V->V ----- injective 
+     TS = I : W->W ----- surjective
+
+======================================
+
+linear map T : V->W
+
+T^(-1) := inverse of T is unique 
+
+   S1          I 
+v ----> w -----------> w  
+
+   S1      T      S2  
+v ----> w ---> v ----> w 
+
+       I          S2  
+v -----------> v ----> w 
+
+======================================
+
+linear map T : V->W is invertible 
+
+iff T is injective & surjective
+
+======================================
+
+Proof. 
+
+(has inverse)  
+
+                             T      T^(-1)
+ injectivity : multiple v's ---> w --------> single v 
+
+                    T^(-1)        T
+surjectivity : ∀w --------> ∃v ---> w
+
+
+(injective & surjective)
+
+
+S exisits such that 
+
+======================================
+              
+         
