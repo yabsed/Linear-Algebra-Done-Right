@@ -20,13 +20,13 @@ linear map T : V->W
 T^(-1) := inverse of T is unique 
 
    S1          I 
-v ----> w -----------> w  
+w ----> v -----------> v  
 
    S1      T      S2  
-v ----> w ---> v ----> w 
+w ----> v ---> w ----> v 
 
        I          S2  
-v -----------> v ----> w 
+w -----------> w ----> v 
 
 ======================================
 
@@ -204,7 +204,7 @@ L(V,W) ---> F^(m,n) ; M is an isomorphism
              M( aT) =        aM(T)
 
  (injective) M(T) = 0 then T(v_k) =  0 for all k (bases) 
-                           null T = {0} 
+                           null M = {0} 
 
                   T 
 (surjective) v_k --->   [ A(1,k) ] w_1 
@@ -215,6 +215,24 @@ L(V,W) ---> F^(m,n) ; M is an isomorphism
 
 ======================================
 
+Linear maps as matrix multiplication
 
+======================================
 
+                basis of V 
+                    |
+  if v =   [ b_1 ] v_1 
+         + [ ... ]
+         + [ b_n ] v_n
+
+then M(v) = [ b_1 ] ∈ F^(n,1)
+            [ ... ]
+            [ b_n ] 
+
+∴ Matrix of a Vector
+
+               M
+isomorphism V ---> F^(n,1)
+
+======================================
 
