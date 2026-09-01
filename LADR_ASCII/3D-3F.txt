@@ -141,8 +141,6 @@ nullT = {0} --- T injective & surjective & invertible
 (ST)(T^(-1)) = (I)(T^(-1))
 (S )         =    (T^(-1))
 
-therefore TS = (T)(T^(-1)) = I
-
 ======================================
 
 Isomorphic vector spaces 
@@ -168,5 +166,55 @@ dim V =      0      +    dim W
         (injective)   (surjective) 
 
 (⇐)
+
+{v_1 ... v_n} basis of V 
+{w_1 ... w_n} basis of W 
+
+define linear map T: V->W (isomorphism)
+
+     T 
+v_k ---> w_k 
+
+T is well-defined 
+         & linear --- v's is basis of V
+
+T is   surjective --- w's spans W 
+T is    injective --- w's independent
+
+======================================
+
+every fin-dim V ≅ F^(dimV) 
+          Pm(F) ≅ F^( m+1)
+
+======================================
+
+{v_1, ..., v_n} basis of V (fixed)
+{w_1, ..., w_m} basis of W (fixed)
+
+        M     
+L(V,W) ---> F^(m,n) ; M is an isomorphism 
+                      
+∴ L(V,W) ≅ F^(m,n)
+
+∴ dim L(V,W) = (dim V)(dim W)
+
+======================================
+
+    (linear) M(S+T) = M(S) +  M(T)
+             M( aT) =        aM(T)
+
+ (injective) M(T) = 0 then T(v_k) =  0 for all k (bases) 
+                           null T = {0} 
+
+                  T 
+(surjective) v_k --->   [ A(1,k) ] w_1 
+                      + [  ....  ]
+                      + [ A(m,k) ] w_m 
+
+             then M(T) = A 
+
+======================================
+
+
 
 
