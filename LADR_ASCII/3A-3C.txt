@@ -237,6 +237,21 @@ T injective iff       nullT = {0}
 
 ===================================================
 
+dim V = dim W (finite dimensional)
+
+linear map T: V->W 
+
+then T injective iff T surjective 
+
+because
+
+dim V = dim null T  + dim range T --- Fundamental Theorem
+
+  n   =     0       +      n
+        (injective)   (surjective)
+
+===================================================
+
 Systems of Linear equations
 
        fix A(j,k) ∈ F 

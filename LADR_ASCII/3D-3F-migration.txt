@@ -33,6 +33,11 @@ T is invertible iff   T is  injective
 
 with dim V = dim W (finite dimensional)
 
+T is invertible iff T injective 
+                iff T surjective 
+
+(∵ Fundamental Theorem)
+
 ======================================
 
 Proof. Definition of properties (of T)
@@ -93,21 +98,29 @@ Proof. (⇐)
 
 dim V = dim W (finite dimensional)
 
-linear map T: V->W 
+linear map S: W->V 
+linear map T: V->W
 
-then T invertible iff T injective 
-                  iff T surjective 
-
-because
-
-dim V = dim null T  + dim range T --- Fundamental Theorem
-
-  n   =     0       +      n
-        (injective)   (surjective)
-
-either alone gives bijection, hence invertible 
+then     ST = I (on V)
+     iff TS = I (on W)
 
 ======================================
 
+because suppose ST = I (on V)
+ 
+    T      S
+ v ---> 0 ---> 0
+   null   zero
+   
+       ST 
+!0 ----------> 0 
+    identity
 
+therefore null T = {0} --- T    injective
+                             & surjective 
+                             & invertible
 
+(ST)(T^(-1)) = (I)(T^(-1)) 
+(S )         =    (T^(-1))
+
+======================================
