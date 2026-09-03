@@ -4,34 +4,13 @@
 
 ### Linear Transformation
 
-$T : V \to W$ is a **linear transformation** if
-
-$$T(au + bv) = a\,T(u) + b\,T(v)$$
-
-**List of famous linear transformations**
-
-| map | type |
-|---|---|
-| $0$ | $V \to W$ |
-| $I$ | $V \to V$ |
-| differentiation | $\mathcal{P}(\mathbf{R}) \to \mathcal{P}(\mathbf{R})$ |
-| integration | $\mathcal{P}(\mathbf{R}) \to \mathbf{R}$ |
-| multiplication by $x^2$ | $\mathcal{P}(\mathbf{R}) \to \mathcal{P}(\mathbf{R})$ |
-
----
-
-### Linear maps $F^n \to F^m$
-
-Every linear map $F^n \to F^m$ has this form, with $A_{j,k} \in F$:
+$T : V \to W$ is a **linear transformation** :
 
 $$
-(x_1, \dots, x_n)
-\;\xrightarrow{\ \text{linear map}\ }\;
-\begin{bmatrix}
-A_{1,1}x_1 + \cdots + A_{1,n}x_n \\
-\vdots \\
-A_{m,1}x_1 + \cdots + A_{m,n}x_n
-\end{bmatrix}
+\begin{array}{rcl}
+au & \xrightarrow{\;T\;} & a\,T(u) \\
++\ bv & \xrightarrow{\;T\;} & +\ b\,T(v)
+\end{array}
 $$
 
 ---
@@ -45,28 +24,7 @@ Suppose
 
 then there exists a **unique** linear map $T : V \to W$ with
 
-$$T v_k = w_k$$
-
-**Proof — Uniqueness.** Suppose $T : V \to W$ is linear with $Tv_k = w_k$:
-
-$$
-\begin{aligned}
-v_k &\xrightarrow{\;T\;} w_k \\
-c_k v_k &\xrightarrow{\;T\;} c_k w_k && \text{by homogeneity} \\
-\textstyle\sum_k c_k v_k &\xrightarrow{\;T\;} \textstyle\sum_k c_k w_k && \text{by additivity}
-\end{aligned}
-$$
-
-**Proof — Existence.** Define
-
-$$T\Big(\sum_k c_k v_k\Big) = \sum_k c_k w_k$$
-
-1. **well-defined** : each $v_k$ has a unique $w_k$
-2. **$Tv_k = w_k$** : take $c_k = 1$ and all other $c$'s $= 0$
-3. **additivity** :
-   $$u + v = \sum_k a_k v_k + \sum_k c_k v_k \;\xrightarrow{\;T\;}\; \sum_k a_k w_k + \sum_k c_k w_k = Tu + Tv$$
-4. **homogeneity** :
-   $$a v = \sum_k (a\, c_k)\, v_k \;\xrightarrow{\;T\;}\; \sum_k (a\, c_k)\, w_k = a \sum_k c_k w_k = a\,T(v)$$
+$$v_k \;\xrightarrow{\;T\;}\; w_k$$
 
 ---
 
@@ -79,9 +37,6 @@ $$
 (aS + bT)v &= a(Sv) + b(Tv) && \text{operations on } \mathcal{L}(V,W) \text{ (pointwise)}
 \end{aligned}
 $$
-
-- $(aS + bT)$ is linear — closure
-- axioms inherited from $W$ — pointwise
 
 $\therefore\ \mathcal{L}(V,W)$ is a vector space (additive identity $=$ the $0$ map)
 
@@ -119,11 +74,7 @@ $$u \xrightarrow{\;AC+BC\;} (AC+BC)(u) = (AC)u + (BC)u$$
 
 ### $ST = TS$ can fail (non-commutativity)
 
-$D$ = differentiation, $T$ = multiplication by $x^2$ on $\mathcal{P}(\mathbf{R})$:
-
-$$p \xrightarrow{\;D\;} p'(x) \xrightarrow{\;T\;} x^2\, p'(x)$$
-
-$$p(x) \xrightarrow{\;T\;} x^2\, p(x) \xrightarrow{\;D\;} x^2\, p'(x) + 2x\, p(x)$$
+For linear maps, $ST \ne TS$ in general.
 
 ---
 
@@ -142,15 +93,7 @@ $$
 
 ### Null space is a subspace
 
-For a linear map $T : V \to W$, $\ \operatorname{null} T = \{v : Tv = 0\}$ is a subspace of $V$:
-
-$$
-\begin{aligned}
-\text{id} &: T(0) = 0 && \text{includes } 0 \\
-\text{closure} &: T(u+v) = Tu + Tv = 0 + 0 && \text{addition} \\
-&\phantom{:\ } T(au) = a(Tu) = a(0) && \text{scalar multiplication}
-\end{aligned}
-$$
+For a linear map $T : V \to W$, $\ \operatorname{null} T = \{v : Tv = 0\}$ is a subspace of $V$.
 
 ---
 
@@ -176,24 +119,7 @@ then $0 = Tu - Tv = T(u - v)$; so $\operatorname{null} T = \{0\}$ includes $u - 
 
 ### Range is a subspace
 
-For a linear map $T : V \to W$, $\ \operatorname{range} T = \{Tv\}$ is a subspace of $W$:
-
-$$
-0 \xrightarrow{\;T\;} 0
-\;;\qquad
-\begin{aligned}
-w_1 &\xleftarrow{\;T\;} v_1 \\
-w_2 &\xleftarrow{\;T\;} v_2 \\
-w_1 + w_2 &\xleftarrow{\;T\;} v_1 + v_2
-\end{aligned}
-\;;\qquad
-\begin{aligned}
-w &\xleftarrow{\;T\;} v \\
-aw &\xleftarrow{\;T\;} av
-\end{aligned}
-$$
-
-id; closure
+For a linear map $T : V \to W$, $\ \operatorname{range} T = \{Tv\}$ is a subspace of $W$.
 
 ---
 
@@ -212,20 +138,9 @@ $$
 \text{basis of } \operatorname{null} T : & \{u_1 \dots u_m\} & \\
 \text{basis of } V : & \{u_1 \dots u_m\} & \cup & \{v_1 \dots v_n\} \\
  & \downarrow & & \downarrow \\
-\text{basis of } \operatorname{range} T : & \{0\rlap{,}\} & & \{Tv_1 \dots Tv_n\}
+\text{basis of } \operatorname{range} T : & \{\} & & \{Tv_1 \dots Tv_n\}
 \end{array}
 $$
-
-**Claim** : $\{Tv_1, \dots, Tv_n\}$ is independent.
-
-Suppose $c_1 Tv_1 + \cdots + c_n Tv_n = 0$; then
-
-$$\operatorname{null} T = \operatorname{span}\{u_1, \dots, u_m\} \ \text{ includes }\ c_1 v_1 + \cdots + c_n v_n$$
-
-$$\therefore\ c_1 v_1 + \cdots + c_n v_n = d_1 u_1 + \cdots + d_m u_m
-\quad\leadsto\quad c\text{'s} = 0$$
-
-since $u_1, \dots, u_m, v_1, \dots, v_n$ is linearly independent. $\blacksquare$
 
 ---
 
@@ -238,7 +153,7 @@ $$
  & & & \small\text{“}\operatorname{null} T\text{”} \\
 \text{basis of } V : & \{u_1 \dots u_m\} & \cup & \{\dots u_n\} \ \text{(cannot be } \{\}\text{)} \\
  & \downarrow & & \downarrow \\
-\text{basis of } W : & \{Tu_1 \dots Tu_m\} & & \{0\rlap{,}\}
+\text{basis of } W : & \{Tu_1 \dots Tu_m\} & & \{\}
 \end{array}
 $$
 
@@ -252,7 +167,7 @@ $$
 \begin{array}{lccc}
 \text{basis of } V : & \{u_1 \dots u_m\} & \\
  & \downarrow & \\
-\text{basis of } W : & \underbrace{\{Tu_1 \dots Tu_m\}}_{\text{“}\operatorname{range} T\text{”}} & \cup & \{\dots v_n\}
+\text{basis of } W : & \underbrace{\{Tu_1 \dots Tu_m\}}_{\text{“}\operatorname{range} T\text{”}} & \cup & \{w_{m+1} \dots w_n\}
 \end{array}
 $$
 
@@ -388,13 +303,16 @@ Linear maps $U \xrightarrow{\;T\;} V \xrightarrow{\;S\;} W$ with $\mathcal{M}(S)
 
 $$u_k \;\xrightarrow{\;T\;}\; B_{1,k}\, v_1 + \cdots + B_{n,k}\, v_n$$
 
-then applying $S$ and collecting the coefficient of each $w_j$:
+$$\Big\downarrow\ S$$
 
 $$
-S(Tu_k)
-= \sum_{r=1}^{n} B_{r,k}\, S v_r
-= \sum_{r=1}^{n} B_{r,k} \sum_{j=1}^{m} A_{j,r}\, w_j
-= \sum_{j=1}^{m} \underbrace{\Big( A_{j,1} B_{1,k} + \cdots + A_{j,n} B_{n,k} \Big)}_{(AB)_{j,k}}\, w_j
+\begin{array}{rcl}
+A_{1,1} B_{1,k}\, w_1 + \cdots + A_{1,n} B_{n,k}\, w_1 & \longrightarrow & (AB)_{1,k}\, w_1 \\
++\quad \vdots & & \vdots \\
++\ A_{j,1} B_{1,k}\, w_j + \cdots + A_{j,n} B_{n,k}\, w_j & \longrightarrow & (AB)_{j,k}\, w_j \\
++\quad \vdots & & \vdots \\
++\ A_{m,1} B_{1,k}\, w_m + \cdots + A_{m,n} B_{n,k}\, w_m & \longrightarrow & (AB)_{m,k}\, w_m
+\end{array}
 $$
 
 ---
