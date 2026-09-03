@@ -2,152 +2,134 @@
 
 3D - Invertibility and Isomorphisms
 
-Invertible linear maps 
+Invertible Linear Maps 
 
 ======================================
 
-linear map T : V->W is invertible 
+linear map T: V->W 
+           is invertible 
 
-iff exists linear map S : W->V (inverse of T)
+iff exists linear map S: W->V (inverse of T)
 
-with ST = I : V->V ----- injective 
-     TS = I : W->W ----- surjective
-
-======================================
-
-linear map T : V->W
-
-T^(-1) := inverse of T is unique 
-
-   S1          I 
-w ----> v -----------> v  
-
-   S1      T      S2  
-w ----> v ---> w ----> v 
-
-       I          S2  
-w -----------> w ----> v 
+with ST = I (on V)
+     TS = I (on W)
 
 ======================================
 
-linear map T : V->W is invertible 
+inverse of linear map T: V->W 
+                      is unique 
 
-iff T is injective & surjective
+S1 = (    I) S1 
+   = (S2  T) S1 
+   =  S2 (T  S1)
+   =  S2 (    I) = S2 
+
+======================================
+
+linear map T:V->W 
+
+T is invertible iff   T is  injective 
+                    & T is surjective 
+
+with dim V = dim W (finite dimensional)
+
+T is invertible iff T injective 
+                iff T surjective 
+
+(∵ Fundamental Theorem)
 
 ======================================
 
-(has inverse)  
+Proof. Definition of properties (of T)
 
-                  T      T^(-1)
- injectivity : v ---> w --------> !v 
+                         T        inverse 
+invertible : ∀v (in V) ---> ∃w ---------> v (∴ injective)
 
-                    T^(-1)        T
-surjectivity : ∀w --------> ∃v ---> w
+                         inverse        T 
+             ∀w (in W) ---------> ∃v ---> w (∴ surjective)
+
+                  T 
+ injective :  !v ---> ∀w (in range T)
+
+                  T
+surjective : ∃v ---> ∀w (in W)
 
 ======================================
+
+Proof. (⇐)
 
 (T is bijection; define S: W->V)
 
-          T        S         
-    ∃!v ---> ∀w ---> ∃!v
+          T               S  
+    ∃!v ---> ∀w (in W) ---> ∃!v
 
-(TS = I: W->W)
+(TS = I on W) 
 
-          T        S         T
-    ∃!v ---> ∀w ---> ∃!v ---> w 
+          T               S         T 
+    ∃!v ---> ∀w (in W) ---> ∃!v ---> w
 
-                        I   
-              ∀w -------------> w 
-
-    therefore TS = I (on W) by definition of S 
-
-(ST = I: V->V)
+(ST = I on V)
 
     consider TS = I (on W)
 
-         T      S         T 
-    ∀v ---> w ---> (??) ---> w   
+                T      S         T 
+    ∀v (in V) ---> w ---> (??) ---> w 
 
-                          T 
-                      !v ---> w
+                                 T 
+                             !v ---> w 
 
-    therefore ST = I (on V) by injectivity of T
+(S is linear: additivity)
 
-(S is linear : additivity)
+             S                 T 
+    w1 + w2 ---> S( w1 +  w2) ---> w1 + w2 
 
-    consider TS = I (on W)
+                               T 
+                 !(Sw1 + Sw2) ---> w1 + w2
 
-             S               T
-    w1 + w2 ---> S(w1 + w2) ---> w1 + w2
+(S is linear: homogeneity)
 
-                             T
-                 Sw1 + Sw2  ---> TSw1 + TSw2 = w1 + w2
+        S          T 
+    aw ---> S(aw) ---> aw 
 
-    therefore S(w1 + w2) = Sw1 + Sw2 by injectivity of T
-
-(S is linear : homogeneity)
-
-    consider TS = I (on W)
-
-        S          T
-    aw ---> S(aw) ---> aw
-
-                   T
-            a(Sw) ---> a(TSw) = aw
-
-    therefore S(aw) = a(Sw) by injectivity of T
-
-======================================
-
-dim V = dim W (finite dimensional)
-
-linear map T: V->W 
-
-then T invertible iff T injective 
-                  iff T surjective 
-
-because
-
-dim V = dim null T  + dim range T --- Fundamental Theorem
-
-  n   =     0       +      n
-        (injective)   (surjective)
-
-either alone gives bijection, hence invertible 
+                   T 
+           !(aSw) ---> aw 
 
 ======================================
 
 dim V = dim W (finite dimensional)
 
 linear map S: W->V 
-           T: V->W 
+linear map T: V->W
 
-then ST = I (on V) iff TS = I (on W)
+then     ST = I (on V)
+     iff TS = I (on W)
 
-(in case of W = V, we have ST = TS = I)
+======================================
 
-because suppose ST = I (on V) 
+because suppose ST = I (on V)
+ 
+    T      S
+ v ---> 0 ---> 0
+   null   zero
+   
+       ST 
+!0 ----------> 0 
+    identity
 
-   T      S
-v ---> 0 ---> 0
-  null   zero
+therefore null T = {0} --- T    injective
+                             & surjective 
+                             & invertible
 
-      ST 
-v ----------> v 
-   identity
-
-nullT = {0} --- T injective & surjective & invertible 
-
-(ST)(T^(-1)) = (I)(T^(-1))
+(ST)(T^(-1)) = (I)(T^(-1)) 
 (S )         =    (T^(-1))
 
 ======================================
 
 Isomorphic vector spaces 
 
- (i) isomorphism is an invertible linear map 
+ (i) isomorphsim is an invertible linear map 
 
-(ii) V≅W (isomorphic) 
+(ii) V≅W (isomorphic)
      iff some isomorphism V->W exists 
 
 ======================================
