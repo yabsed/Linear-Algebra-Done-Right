@@ -74,14 +74,7 @@ For linear maps, $ST \ne TS$ in general.
 
 ### $T(0) = 0$
 
-If $T$ is a linear map, then $T(0) = 0$:
-
-$$
-\begin{aligned}
-0 + 0 &\xrightarrow{\;T\;} T(0) + T(0) \\
-0 &\xrightarrow{\;T\;} T(0)
-\end{aligned}
-$$
+If $T$ is a linear map, then $T(0) = 0$.
 
 ## 3B. Null Spaces and Ranges
 
@@ -97,7 +90,7 @@ A linear map $T : V \to W$
 
 $$
 \begin{aligned}
-\text{is injective} &\iff (Tu = Tv \implies u = v) && \text{definition} \\
+\text{is injective} &\iff (Tu = Tv \implies u = v) \\
 &\iff (u \ne v \implies Tu \ne Tv) \\
 &\iff \operatorname{null} T = \{0\}
 \end{aligned}
@@ -188,20 +181,23 @@ $$
 e_k \;\xrightarrow{\;T\;}\; \begin{bmatrix} A_{1,k} \\ \vdots \\ A_{m,k} \end{bmatrix}
 $$
 
-1. $\{0\} \subseteq \operatorname{null} T$
+$$\{0\} \subseteq \operatorname{null} T$$
 
-2. nonzero solution exists $\iff \operatorname{null} T \supsetneq \{0\} \iff T$ not injective
+$$
+\begin{aligned}
+\text{nonzero solution exists} \quad &\iff T \text{ not injective} \\
+&\iff \{0\} \subsetneq \operatorname{null} T \\[2ex]
+\text{no solution for some choice of } c \quad &\iff T \text{ not surjective} \\
+&\iff \operatorname{range} T \subsetneq F^m
+\end{aligned}
+$$
 
-3. a system with **more variables than equations** ($n > m$) has nonzero solutions —
-   because $T$ is not injective
-
-4. no solution for some choice of $c$ $\iff \operatorname{range} T \ne F^m \iff T$ not surjective
-
-   $$\begin{bmatrix} \sum_k A_{1,k}\, x_k \\ \vdots \\ \sum_k A_{m,k}\, x_k \end{bmatrix} = \begin{bmatrix} c_1 \\ \vdots \\ c_m \end{bmatrix}
-   \quad\text{means}\quad Tx = (c_1, \dots, c_m)$$
-
-5. a system with **more equations than variables** ($m > n$) has no solution for some choice
-   of the constant terms — because $T$ is not surjective
+$$
+\begin{aligned}
+\text{more variables than equations } (n > m) \ &\longrightarrow\ \text{nonzero solution exists} \\
+\text{more equations than variables } (m > n) \ &\longrightarrow\ \text{no solution for some choice of } c
+\end{aligned}
+$$
 
 ## 3C. Matrices
 
@@ -296,9 +292,9 @@ $$\Big\downarrow\ S$$
 $$
 \begin{array}{rcl}
 A_{1,1} B_{1,k}\, w_1 + \cdots + A_{1,n} B_{n,k}\, w_1 & \longrightarrow & \phantom{+\ } (AB)_{1,k}\, w_1 \\
-+\quad \vdots & & +\quad \vdots \\
+\quad \vdots & & \quad \vdots \\
 +\ A_{j,1} B_{1,k}\, w_j + \cdots + A_{j,n} B_{n,k}\, w_j & \longrightarrow & +\ (AB)_{j,k}\, w_j \\
-+\quad \vdots & & +\quad \vdots \\
+\quad \vdots & & \quad \vdots \\
 +\ A_{m,1} B_{1,k}\, w_m + \cdots + A_{m,n} B_{n,k}\, w_m & \longrightarrow & +\ (AB)_{m,k}\, w_m
 \end{array}
 $$
@@ -420,7 +416,7 @@ $$A_{\cdot,k} = C\, R_{\cdot,k} \quad\text{---}\quad R_{\cdot,k} = \text{coeffic
 
 $$\operatorname{rank} A := \text{column rank of } A = \text{row rank of } A$$
 
-**Proof.** Assume $c \ge 1$ (otherwise $A = 0$). Consider $A = CR$:
+**Proof.** Consider $A = CR$ (assume $A \ne 0$):
 
 $$\text{row rank } A \le c = \text{column rank } A$$
 

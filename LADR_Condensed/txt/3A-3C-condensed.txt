@@ -55,10 +55,6 @@ ST = TS can fail (non-commutativity)
   if T is Linear Map 
 then T(0) = 0 
 
-       T   
-0 + 0 ---> T(0) + T(0)            
-    0 ---> T(0)
-
 ===================================================
 
 3B. Null Spaces and Ranges
@@ -71,7 +67,7 @@ nullT = {v : Tv = 0} is a subspace of V
 ===================================================
 
 linear map T: V->W 
-is injective iff (Tu = Tv then   u =  v) --- definition
+is injective iff (Tu = Tv then   u =  v)
              iff ( u != v then Tu != Tv)
              iff (null T = {0})
 
@@ -143,27 +139,15 @@ sum of x_k e_k ---> sum of x_k [ A(1, k) ] = [ sum of A(1,k) x_k ]
 
   (i) {0} ⊆ null T 
 
- (ii) nonzero solution exists iff null T ⊋ {0}
-                              iff T not injective 
-
-(iii) system with 
-      more variables then equations (n > m) 
-      has nonzero solutions
-
-      because T is not injective
-
- (iv) no solution            iff range T != F^m 
-      for some choice of c   iff T not surjective 
-                                       
-      [ sum of A(1,k) x_k ]   [ c_1 ]  
-      [        ...        ] = [ ... ] means Tx = (c1, ... cm)
-      [ sum of A(m,k) x_k ]   [ c_m ] 
-
-  (v) system with 
-      more equations then variables (m > n)
-      has no solution for some choice of the constatn terms 
-
-      because T is not surjective. 
+ (ii) nonzero solution exists iff T not injective 
+                              iff {0} ⊊ null T  
+      
+(iii) no solution            iff T not surjective 
+      for some choice of c   iff range T ⊊ F^m 
+                              
+ (iv) more variables then equations (n > m) ---> nonzero solution exists
+      more equations then variables (m > n) ---> no solution
+                                                 for some choice of c
 
 ===================================================
 
@@ -242,9 +226,9 @@ u_k --->   [ B(1,k) ] v_1
                   S ↓                 
                                                                 I
 + [ A(1,1) ]            w_1 + ... + [ A(1,n) ]            w_1  --->    [ (AB)(1,k) ] w_1 
-+ [  ....  ]                +     + [  ....  ]                       + [    ...    ]
+  [  ....  ]                        [  ....  ]                         [    ...    ]
 + [ A(j,1) ] [ B(1,k) ] w_j + ... + [ A(j,n) ] [ B(n,k) ] w_j  --->  + [ (AB)(j,k) ] w_j 
-+ [  ....  ]                +     + [  ....  ]                       + [    ...    ]
+  [  ....  ]                        [  ....  ]                         [    ...    ]
 + [ A(m,1) ]            w_m +     + [ A(m,n) ]            w_m  --->  + [ (AB)(m,k) ] w_m
 
 ===================================================
@@ -361,9 +345,7 @@ rank A := column rank of A
 
 Proof. 
 
-assume c >= 1 (otherwise A = 0)
-
-consider A = CR 
+consider A = CR (assume A != 0)
 
 row rank A <= c = column rank A 
 
