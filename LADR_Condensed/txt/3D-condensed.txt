@@ -1,0 +1,417 @@
+======================================
+
+3D - Invertibility and Isomorphisms
+
+Invertible Linear Maps 
+
+======================================
+
+linear map T: V->W 
+           is invertible 
+
+iff exists linear map S: W->V (inverse of T)
+
+with ST = I (on V)
+     TS = I (on W)
+
+======================================
+
+inverse of linear map T: V->W 
+                      is unique 
+
+S1 = (    I) S1 
+   = (S2  T) S1 
+   =  S2 (T  S1)
+   =  S2 (    I) = S2 
+
+======================================
+
+linear map T:V->W 
+
+T is invertible iff   T is  injective 
+                    & T is surjective 
+
+with dim V = dim W (finite dimensional)
+
+T is invertible iff T injective 
+                iff T surjective 
+
+(∵ Fundamental Theorem)
+
+======================================
+
+Proof. Definition of properties (of T)
+
+                         T        inverse 
+invertible : ∀v (in V) ---> ∃w ---------> v (∴ injective)
+
+                         inverse        T 
+             ∀w (in W) ---------> ∃v ---> w (∴ surjective)
+
+                  T 
+ injective :  !v ---> ∀w (in range T)
+
+                  T
+surjective : ∃v ---> ∀w (in W)
+
+======================================
+
+Proof. (⇐)
+
+(T is bijection; define S: W->V)
+
+          T               S  
+    ∃!v ---> ∀w (in W) ---> ∃!v
+
+(TS = I on W) 
+
+          T               S         T 
+    ∃!v ---> ∀w (in W) ---> ∃!v ---> w
+
+(ST = I on V)
+
+    consider TS = I (on W)
+
+                T      S         T 
+    ∀v (in V) ---> w ---> (??) ---> w 
+
+                                 T 
+                             !v ---> w 
+
+(S is linear: additivity)
+
+             S                 T 
+    w1 + w2 ---> S( w1 +  w2) ---> w1 + w2 
+
+                               T 
+                 !(Sw1 + Sw2) ---> w1 + w2
+
+(S is linear: homogeneity)
+
+        S          T 
+    aw ---> S(aw) ---> aw 
+
+                   T 
+           !(aSw) ---> aw 
+
+======================================
+
+dim V = dim W (finite dimensional)
+
+linear map S: W->V 
+linear map T: V->W
+
+then     ST = I (on V)
+     iff TS = I (on W)
+
+======================================
+
+because suppose ST = I (on V)
+ 
+    T      S
+ v ---> 0 ---> 0
+   null   zero
+   
+       ST 
+!0 ----------> 0 
+    identity
+
+therefore null T = {0} --- T    injective
+                             & surjective 
+                             & invertible
+
+(ST)(T^(-1)) = (I)(T^(-1)) 
+(S )         =    (T^(-1))
+
+======================================
+
+Isomorphic vector spaces 
+
+ (i) isomorphsim is an invertible linear map 
+
+(ii) V≅W (isomorphic)
+     iff some isomorphism V->W exists 
+
+======================================
+
+(fin-dim V, W over F)
+
+V≅W iff invertible (= bijective) linear map
+     iff dim V = dim W 
+
+======================================
+
+(⇒) 
+
+dim V =  dim null T + dim range T --- Fundamental Theorem (isomorphism T)
+
+dim V =      0      +    dim W 
+        (injective)   (surjective) 
+
+(⇐)
+
+{v_1 ... v_n} basis of V 
+{w_1 ... w_n} basis of W 
+
+define linear map T: V->W (isomorphism)
+
+     T 
+v_k ---> w_k 
+
+T is well-defined 
+         & linear --- v's is basis of V
+
+T is   surjective --- w's spans W 
+T is    injective --- w's independent
+
+======================================
+
+every fin-dim V ≅ F^(dimV) 
+          Pm(F) ≅ F^( m+1)
+
+======================================
+
+{v_1, ..., v_n} basis of V (fixed)
+{w_1, ..., w_m} basis of W (fixed)
+
+        M     
+L(V,W) ---> F^(m,n) ; M is an isomorphism
+                      
+∴ L(V,W) ≅ F^(m,n)
+
+∴ dim L(V,W) = (dim V)(dim W)
+
+======================================
+
+    (linear) M(S+T) = M(S) +  M(T)
+             M( aT) =        aM(T)
+
+ (injective) M(T) = 0 then T(v_k) =  0 for all k (bases) 
+                           null M = {0} 
+
+                  T 
+(surjective) v_k --->   [ A(1,k) ] w_1 
+                      + [  ....  ]
+                      + [ A(m,k) ] w_m 
+
+             then M(T) = A 
+
+======================================
+
+Linear maps as matrix multiplication
+
+======================================
+
+                 basis of V 
+                     |
+  if v =    [ b_1 ] v_1 
+          + [ ... ]
+          + [ b_n ] v_n
+
+then M(v) = [ b_1 ] ∈ F^(n,1)
+            [ ... ]
+            [ b_n ] 
+
+∴ Matrix of a Vector
+
+======================================
+
+   M
+V ---> F^(n,1) is isomorphism
+
+because
+
+(linear by uniqueness of coordinates)
+                        
+  v =   sum of (b_k)v_k ; av = sum of (a)(b_k)v_k
++ u   + sum of (c_k)v_k
+
+(bijective)
+
+  [ b_1 ] v_1         [ b_1 ]
++ [ ... ]      <--->  [ ... ]
++ [ b_n ] v_n         [ b_n ]
+
+======================================
+
+M(T)(*,k) = MT(v_k)
+
+because   [ M(T)(1,k) ] w_1 = T(v_k)
+        + [    ...    ]
+        + [ M(T)(m,k) ] w_m 
+
+apply M to both side 
+
+======================================
+
+∀v :   M(Tv)    =       M(T)M(v)
+      linear map   matrix multiplication 
+
+    v =   [ b_1 ] v_1 
+        + [ ... ]
+        + [ b_n ] v_n 
+
+   Tv =   [ b_1 ] T(v_1) 
+        + [ ... ]
+        + [ b_n ] T(v_n)
+
+MT(v) =   [ b_1 ] MT(v_1) =   [ b_1 ] M(T)(*,1) = M(T)M(v)
+        + [ ... ]           + [ ... ]
+        + [ b_n ] MT(v_n)   + [ b_n ] M(T)(*,n)
+
+======================================
+
+linear map T: V->W (V, W finite-dimensional)
+
+dim range T = column rank of M(T) 
+
+same for every choice of basis 
+since range T is basis-free 
+
+======================================
+
+                 M 
+isomorphism : W ---> F^(m,1)
+
+                                   M 
+isomorphism : span(Tv_1 ... Tv_n) ---> span(MT(v1) ... MT(vn))
+              = range T                = span columns of M(T) 
+    
+isomorphic spaces have equal dimension
+
+======================================
+
+Change of basis
+
+======================================
+
+linear map T: V->V and one basis used twice 
+
+M(T, (v1 ... vn)) := M(T, (v1 ... vn), (v1 ... vn))
+
+======================================
+
+(identity matrix)
+
+identity matrix : I ∈ F^(n,n) 
+
+                  with I(j,k) = 1 if (j = k) else 0 
+
+for any square A 
+        of the same size : AI = IA = A 
+
+the symbol I denotes 
+           both the identity operator and matrix
+
+any single basis of V, M(I) = I 
+
+======================================
+
+(invertible matrix)
+
+square A is invertible iff exists square B (same size)
+                       with AB = BA = I 
+
+such B is unique, written A^(-1)
+
+======================================
+
+ (i) (A^-1)^-1 = A
+ 
+     since (A^-1)(A) = A(A^-1) = I 
+
+(ii)   if A, C invertible of the same size 
+     then (AC) is invertible with (AC)^(-1) = (C^-1)(A^-1)
+
+     since (AC)(C^-1 A^-1) = A(C C^-1)A^-1
+                           = A(     I)A^-1
+                           = A        A^-1 = I 
+
+     likewise (C^-1 A^-1)(AC) = I 
+
+======================================
+
+Matrix of a product 
+
+basis u1 ... um of U 
+basis v1 ... vn of V ; linear map T: U->V 
+basis w1 --- wp of W ; linear map S: V->W 
+
+  M(ST, u1...um, w1...wp) 
+= M( S, v1...vn, w1...wp) M( T, u1...um, v1...vn)
+
+∵ M(ST) = M(S)M(T)
+
+======================================
+
+identity operator w.r.t two bases 
+
+basis u1 ... un of V 
+basis v1 ... vn of V 
+
+then M(I, u1...un, v1...vn) and M(I, v1...vn, u1...un)
+are invertible and are inverses of each other 
+
+column k        = coordinates of uk
+of M(I,(u),(v))   in the basis of v1...vn
+
+because 
+
+I = M(I,(u),(u)) = M(I,(v),(u)) M(I,(u),(v))
+I = M(I,(v),(v)) = M(I,(u),(v)) M(I,(v),(u))
+
+======================================
+
+Example 
+
+M(I, ((4,2),(5,3)), ((1,0),(0,1))) = [4 5]
+                                     [2 3]
+
+M(I, ((1,0),(0,1)), ((4,2),(5,3))) = [4 5] ^ (-1)  = [3/2  -5/2]
+                                     [2 3]           [ -1     2]
+
+======================================
+
+Change-of-basis Formula
+
+linear map T:V->V 
+
+basis u1...un of V 
+basis v1...vn of V 
+
+A = M(T,(u))
+B = M(T,(v))
+C = M(I,(u),(v))
+
+then A = C^(-1)(BC) 
+
+======================================
+
+Proof. 
+
+A = M(IT,(u),(u))
+  = M( I,(v),(u)) M(T ,(u),(v))
+  =        C^(-1) M(TI,(u),(v))
+  =        C^(-1) M(T ,(v),(v)) M(I,(u),(v))
+  =        C^(-1) B             C 
+
+======================================
+
+Matrix of inverse = inverse of Matrix 
+
+invertible linear map T: V->V 
+
+basis v1 ... vn of V 
+
+then M(T^(-1)) = (MT)^(-1)
+
+======================================
+
+Proof.
+
+M(T^-1)M(T) = M(T^-1 T)
+            = M(     I) = I 
+
+M(T)M(T^-1) = M(T T^-1) = I
+
+======================================
