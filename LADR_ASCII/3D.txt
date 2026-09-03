@@ -331,4 +331,87 @@ such B is unique, written A^(-1)
 
 ======================================
 
+Matrix of a product 
 
+basis u1 ... um of U 
+basis v1 ... vn of V ; linear map T: U->V 
+basis w1 --- wp of W ; linear map S: V->W 
+
+  M(ST, u1...um, w1...wp) 
+= M( S, v1...vn, w1...wp) M( T, u1...um, v1...vn)
+
+∵ M(ST) = M(S)M(T)
+
+======================================
+
+identity operator w.r.t two bases 
+
+basis u1 ... un of V 
+basis v1 ... vn of V 
+
+then M(I, u1...un, v1...vn) and M(I, v1...vn, u1...un)
+are invertible and are inverses of each other 
+
+column k        = coordinates of uk
+of M(I,(u),(v))   in the basis of v1...vn
+
+because 
+
+I = M(I,(u),(u)) = M(I,(v),(u)) M(I,(u),(v))
+I = M(I,(v),(v)) = M(I,(u),(v)) M(I,(v),(u))
+
+======================================
+
+Example 
+
+M(I, ((4,2),(5,3)), ((1,0),(0,1))) = [4 5]
+                                     [2 3]
+
+M(I, ((1,0),(0,1)), ((4,2),(5,3))) = [4 5] ^ (-1)  = [3/2  -5/2]
+                                     [2 3]           [ -1     2]
+
+======================================
+
+Change-of-basis Formula
+
+linear map T:V->V 
+
+basis u1...un of V 
+basis v1...vn of V 
+
+A = M(T,(u))
+B = M(T,(v))
+C = M(I,(u),(v))
+
+then A = C^(-1)(BC) 
+
+======================================
+
+Proof. 
+
+A = M(IT,(u),(u))
+  = M( I,(v),(u)) M(T ,(u),(v))
+  =        C^(-1) M(TI,(u),(v))
+  =        C^(-1) M(T ,(v),(v)) M(I,(u),(v))
+  =        C^(-1) B             C 
+
+======================================
+
+Matrix of inverse = inverse of Matrix 
+
+invertible linear map T: V->V 
+
+basis v1 ... vn of V 
+
+then M(T^(-1)) = (MT)^(-1)
+
+======================================
+
+Proof.
+
+M(T^-1)M(T) = M(T^-1 T)
+            = M(     I) = I 
+
+M(T)M(T^-1) = M(T T^-1) = I
+
+======================================
