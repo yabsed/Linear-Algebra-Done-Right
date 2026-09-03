@@ -10,7 +10,10 @@ Linear Transformation T : V -> W
   au  --->   aT(u) 
 + bv  ---> + bT(v) 
 
+===================================================
+
 List of famous Linear Transformations
+
               0 :    V -> W
               I :    V -> V
 differentiation : P(R) -> P(R)
