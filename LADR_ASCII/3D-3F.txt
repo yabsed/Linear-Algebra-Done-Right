@@ -136,7 +136,8 @@ Isomorphic vector spaces
 
 (fin-dim V, W over F)
 
-V≅W iff dim V = dim W 
+V≅W iff invertible (= bijective) linear map
+     iff dim V = dim W 
 
 ======================================
 
@@ -174,7 +175,7 @@ every fin-dim V ≅ F^(dimV)
 {w_1, ..., w_m} basis of W (fixed)
 
         M     
-L(V,W) ---> F^(m,n) ; M is an isomorphism 
+L(V,W) ---> F^(m,n) ; M is an isomorphism
                       
 ∴ L(V,W) ≅ F^(m,n)
 
@@ -213,39 +214,72 @@ then M(v) = [ b_1 ] ∈ F^(n,1)
 
 ∴ Matrix of a Vector
 
-               M
-isomorphism V ---> F^(n,1)
+======================================
+
+   M
+V ---> F^(n,1) is isomorphism
+
+because
+
+(linear by uniqueness of coordinates)
+                        
+  v =   sum of (b_k)v_k ; av = sum of (a)(b_k)v_k
++ u   + sum of (c_k)v_k
+
+(bijective)
+
+  [ b_1 ] v_1         [ b_1 ]
++ [ ... ]      <--->  [ ... ]
++ [ b_n ] v_n         [ b_n ]
 
 ======================================
 
-      T
-v_k ---> T(v_k) =   [ A(1,k) ] w_1
-                  + [  ....  ]
-                  + [ A(m,k) ] w_m
+M(T)(*,k) = MT(v_k)
 
-  column k of M(T)        matrix of the vector T(v_k)
-         ↓                            ↓
-    [ A(1,k) ]                    [ A(1,k) ]
-    [  ....  ]         =          [  ....  ]
-    [ A(m,k) ]                    [ A(m,k) ]
+because   [ M(T)(1,k) ] w_1 = T(v_k)
+        + [    ...    ]
+        + [ M(T)(m,k) ] w_m 
 
-∴ M(T)(*,k) = M T(v_k)
+apply M to both side 
 
 ======================================
 
 ∀v :   M(Tv)    =       M(T)M(v)
       linear map   matrix multiplication 
 
- v =   [ b_1 ] v_1 
-     + [ ... ]
-     + [ b_n ] v_n 
+    v =   [ b_1 ] v_1 
+        + [ ... ]
+        + [ b_n ] v_n 
 
-Tv =   [ b_1 ] T(v_1) 
-     + [ ... ]
-     + [ b_n ] T(v_n)
+   Tv =   [ b_1 ] T(v_1) 
+        + [ ... ]
+        + [ b_n ] T(v_n)
 
-M(Tv) =   [ b_1 ] M T(v_1) =   [ b_1 ] M(T)(*,1) = M(T)M(v)
-        + [ ... ]            + [ ... ]
-        + [ b_n ] M T(v_n)   + [ b_n ] M(T)(*,n)
+MT(v) =   [ b_1 ] MT(v_1) =   [ b_1 ] M(T)(*,1) = M(T)M(v)
+        + [ ... ]           + [ ... ]
+        + [ b_n ] MT(v_n)   + [ b_n ] M(T)(*,n)
 
 ======================================
+
+linear map T: V->W (V, W finite-dimensional)
+
+dim range T = column rank of M(T) 
+
+same for every choice of basis 
+since range T is basis-free 
+
+======================================
+
+                 M 
+isomorphism : W ---> F^(m,1)
+
+                                   M 
+isomorphism : span(Tv_1 ... Tv_n) ---> span(MT(v1) ... MT(vn))
+              = range T                = span columns of M(T) 
+    
+isomorphic spaces have equal dimension
+
+======================================
+
+
+                             
