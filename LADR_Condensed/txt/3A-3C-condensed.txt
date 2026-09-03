@@ -319,6 +319,14 @@ then exist m-by-c matrix C (in F)
 
 with A = CR 
 
+      n           c         n
+   [     ]       [ ]
+ m [  A  ]  =  m [C]  [     R     ] c
+   [     ]       [ ]
+
+each column of A = combination of the c columns of C
+each    row of A = combination of the c    rows of R
+
 ===================================================
 
 Step 1. Construct C
@@ -352,8 +360,5 @@ row rank A <= c = column rank A
 because every row in A is a 
         linear combination of the c rows of R 
 
-column rank A  =    row rank (A^t)
-              <= column rank (A^t)
-               =    row rank  A
-
+take transpose to prove the rest. 
 ===================================================

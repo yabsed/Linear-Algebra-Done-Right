@@ -403,6 +403,21 @@ then there exist an $m$-by-$c$ matrix $C$ (in $F$) and a $c$-by-$n$ matrix $R$ (
 
 $$A = CR$$
 
+$$
+\underset{m \times n}{\boxed{\vphantom{\rule[-1.1em]{0pt}{2.2em}}\hspace{1.8em} A \hspace{1.8em}}}
+\;=\;
+\underset{m \times c}{\boxed{\vphantom{\rule[-1.1em]{0pt}{2.2em}}\hspace{0.15em} C \hspace{0.15em}}}
+\;\;
+\underset{c \times n}{\boxed{\vphantom{\rule[-0.35em]{0pt}{0.7em}}\hspace{1.8em} R \hspace{1.8em}}}
+$$
+
+$$
+\begin{aligned}
+\text{each column of } A &= \text{combination of the } c \text{ columns of } C \\
+\text{each row of } A &= \text{combination of the } c \text{ rows of } R
+\end{aligned}
+$$
+
 **Step 1. Construct $C$** — reduce the columns $A_{\cdot,1}, \dots, A_{\cdot,n}$ into a basis of their span;
 the basis has length $c$ — column rank.
 
@@ -422,12 +437,4 @@ $$\text{row rank } A \le c = \text{column rank } A$$
 
 because every row of $A$ is a linear combination of the $c$ rows of $R$
 
-$$
-\begin{aligned}
-\text{column rank } A &= \text{row rank } A^t \\
-&\le \text{column rank } A^t \\
-&= \text{row rank } A
-\end{aligned}
-$$
-
-$\blacksquare$
+take transpose to prove the rest. $\blacksquare$
