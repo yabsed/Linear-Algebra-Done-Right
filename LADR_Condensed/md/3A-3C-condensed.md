@@ -64,12 +64,6 @@ $$
 \end{aligned}
 $$
 
-Proof of $(A+B)C = AC + BC$:
-
-$$u \xrightarrow{\;C\;} Cu \xrightarrow{\;A+B\;} (A+B)(Cu) = A(Cu) + B(Cu) = (AC)u + (BC)u$$
-
-$$u \xrightarrow{\;AC+BC\;} (AC+BC)(u) = (AC)u + (BC)u$$
-
 ---
 
 ### $ST = TS$ can fail (non-commutativity)
@@ -109,12 +103,6 @@ $$
 \end{aligned}
 $$
 
-**(injective $\Rightarrow$)** $\operatorname{null} T$ includes $0$ — since $T(0) = T(0) + T(0)$;
-if $v \ne 0$ then $Tv \ne 0$ — injectivity; $\ \therefore \operatorname{null} T = \{0\}$
-
-**($\operatorname{null} T = \{0\}$ $\Rightarrow$)** suppose $Tu = Tv$;
-then $0 = Tu - Tv = T(u - v)$; so $\operatorname{null} T = \{0\}$ includes $u - v$; $\ \therefore u = v$
-
 ---
 
 ### Range is a subspace
@@ -151,7 +139,7 @@ If $\dim V > \dim W$, then a linear map $T : V \to W$ is **not injective** (fini
 $$
 \begin{array}{lccc}
  & & & \small\text{“}\operatorname{null} T\text{”} \\
-\text{basis of } V : & \{u_1 \dots u_m\} & \cup & \{\dots u_n\} \ \text{(cannot be } \{\}\text{)} \\
+\text{basis of } V : & \{u_1 \dots u_m\} & \cup & \{\dots u_n\} \\
  & \downarrow & & \downarrow \\
 \text{basis of } W : & \{Tu_1 \dots Tu_m\} & & \{\}
 \end{array}
@@ -307,11 +295,11 @@ $$\Big\downarrow\ S$$
 
 $$
 \begin{array}{rcl}
-A_{1,1} B_{1,k}\, w_1 + \cdots + A_{1,n} B_{n,k}\, w_1 & \longrightarrow & (AB)_{1,k}\, w_1 \\
-+\quad \vdots & & \vdots \\
-+\ A_{j,1} B_{1,k}\, w_j + \cdots + A_{j,n} B_{n,k}\, w_j & \longrightarrow & (AB)_{j,k}\, w_j \\
-+\quad \vdots & & \vdots \\
-+\ A_{m,1} B_{1,k}\, w_m + \cdots + A_{m,n} B_{n,k}\, w_m & \longrightarrow & (AB)_{m,k}\, w_m
+A_{1,1} B_{1,k}\, w_1 + \cdots + A_{1,n} B_{n,k}\, w_1 & \longrightarrow & \phantom{+\ } (AB)_{1,k}\, w_1 \\
++\quad \vdots & & +\quad \vdots \\
++\ A_{j,1} B_{1,k}\, w_j + \cdots + A_{j,n} B_{n,k}\, w_j & \longrightarrow & +\ (AB)_{j,k}\, w_j \\
++\quad \vdots & & +\quad \vdots \\
++\ A_{m,1} B_{1,k}\, w_m + \cdots + A_{m,n} B_{n,k}\, w_m & \longrightarrow & +\ (AB)_{m,k}\, w_m
 \end{array}
 $$
 
@@ -434,12 +422,9 @@ $$\operatorname{rank} A := \text{column rank of } A = \text{row rank of } A$$
 
 **Proof.** Assume $c \ge 1$ (otherwise $A = 0$). Consider $A = CR$:
 
-$$\text{row rank } A \le c = \text{column rank } A
-\quad\text{---}\quad
-\begin{aligned}
-&\text{every row of } A \text{ is a linear combination} \\
-&\text{of the } c \text{ rows of } R
-\end{aligned}$$
+$$\text{row rank } A \le c = \text{column rank } A$$
+
+because every row of $A$ is a linear combination of the $c$ rows of $R$
 
 $$
 \begin{aligned}

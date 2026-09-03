@@ -48,17 +48,6 @@ we need to prove that (ST) is linear
 distributivity (A+B)C  = AC + BC 
                 A(B+C) = AB + AC 
 
-   C       A+B 
-u ---> Cu -----> (A+B)(Cu)
-                 = A(Cu) + B(Cu)
-                 = (AC)u + (BC)u
-
-      AC+BC 
-u -------------> (AC+BC)(u)
-                 = (AC)u + (BC)u
-
-===================================================
-
 ST = TS can fail (non-commutativity)
 
 ===================================================
@@ -85,15 +74,6 @@ linear map T: V->W
 is injective iff (Tu = Tv then   u =  v) --- definition
              iff ( u != v then Tu != Tv)
              iff (null T = {0})
-
-        (inj) null includes 0       --- T(0) = T(0) + T(0)
-              ; v != 0 then Tv != 0 --- injectivity
-              ; nullT = {0}
-
-(nullT = {0}) suppose Tu = Tv 
-              ; 0 = Tu - Tv = T(u-v)
-              ; null = {0} includes u-v
-              ; u = v
 
 ===================================================
 
@@ -122,7 +102,7 @@ basis of range T :      {}           {Tv1 ... Tvn}
 then linear map T : V->W is not injective (finite-dimensional)
 
                                     "null T"
-basis of V : { u_1 ...  u_m} union { ... u_n} (cannot be {}) 
+basis of V : { u_1 ...  u_m} union { ... u_n} 
                 ↓      ↓            ↓ 
 basis of W : {Tu_1 ... Tu_m}          {}
 
@@ -261,11 +241,11 @@ u_k --->   [ B(1,k) ] v_1
 
                   S ↓                 
                                                                 I
-+ [ A(1,1) ]            w_1 + ... + [ A(1,n) ]            w_1  --->  [ (AB)(1,k) ] w_1 
-+ [  ....  ]                +     + [  ....  ]                       [    ...    ]
-+ [ A(j,1) ] [ B(1,k) ] w_j + ... + [ A(j,n) ] [ B(n,k) ] w_j  --->  [ (AB)(j,k) ] w_j 
-+ [  ....  ]                +     + [  ....  ]                       [    ...    ]
-+ [ A(m,1) ]            w_m +     + [ A(m,n) ]            w_m  --->  [ (AB)(m,k) ] w_m
++ [ A(1,1) ]            w_1 + ... + [ A(1,n) ]            w_1  --->    [ (AB)(1,k) ] w_1 
++ [  ....  ]                +     + [  ....  ]                       + [    ...    ]
++ [ A(j,1) ] [ B(1,k) ] w_j + ... + [ A(j,n) ] [ B(n,k) ] w_j  --->  + [ (AB)(j,k) ] w_j 
++ [  ....  ]                +     + [  ....  ]                       + [    ...    ]
++ [ A(m,1) ]            w_m +     + [ A(m,n) ]            w_m  --->  + [ (AB)(m,k) ] w_m
 
 ===================================================
 
@@ -385,9 +365,10 @@ assume c >= 1 (otherwise A = 0)
 
 consider A = CR 
 
-row rank A <= c = column rank A --- every row in A 
-                                    is a linear combination of the 
-                                    c rows of R 
+row rank A <= c = column rank A 
+
+because every row in A is a 
+        linear combination of the c rows of R 
 
 column rank A  =    row rank (A^t)
               <= column rank (A^t)
