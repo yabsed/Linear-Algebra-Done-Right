@@ -153,15 +153,15 @@ $$
 
 ---
 
-### Operators on finite-dimensional $V$
+### $\dim V = \dim W$ $\implies$ injective $\iff$ surjective
 
-For a linear map $T : V \to V$ (finite-dimensional):
+If $\dim V = \dim W$, then a linear map $T : V \to W$ (finite-dimensional):
 
 $$
 \begin{aligned}
-T \text{ injective} &\iff \operatorname{null} T = \{0\} \\
-&\iff \dim \operatorname{range} T = \dim V \\
-&\iff \operatorname{range} T = V \\
+\text{is injective} &\iff \operatorname{null} T = \{0\} \\
+&\iff \dim \operatorname{range} T = \dim V = \dim W \\
+&\iff \operatorname{range} T = W \\
 &\iff T \text{ surjective}
 \end{aligned}
 $$

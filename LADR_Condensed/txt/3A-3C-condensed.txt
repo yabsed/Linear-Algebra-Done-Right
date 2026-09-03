@@ -95,7 +95,7 @@ basis of range T :      {}           {Tv1 ... Tvn}
 ===================================================
 
   if dim V > dim W 
-then linear map T : V->W is not injective (finite-dimensional)
+then linear map T: V->W is not injective (finite-dimensional)
 
                                     "null T"
 basis of V : { u_1 ...  u_m} union { ... u_n} 
@@ -105,7 +105,7 @@ basis of W : {Tu_1 ... Tu_m}          {}
 ===================================================
 
   if dim V < dim W 
-then linear map T : V->W is not surjective (finite-dimensional)
+then linear map T: V->W is not surjective (finite-dimensional)
 
 basis of V : {  u_1 ...   u_m } 
                  ↓        ↓
@@ -114,12 +114,13 @@ basis of W : { Tu_1 .... Tu_m } union { w_m+1... w_n}
 
 ===================================================
 
-linear map T : V->V (finite-dimensional)
+  if dim V = dim W (finite-dimensional)
+then linear map T: V->W 
 
-T injective iff       nullT = {0}
-            iff dim range T = dim V
-            iff     range T = V
-            iff           T surjective 
+  is injective iff       nullT = {0}
+               iff dim range T = dim V = dim W 
+               iff     range T = W 
+               iff           T surjective 
 
 ===================================================
 
