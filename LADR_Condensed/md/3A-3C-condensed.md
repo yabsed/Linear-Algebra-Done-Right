@@ -226,7 +226,12 @@ Linear map $T : V \to W$, with
 $\mathcal{M}(T)$ is the $m$-by-$n$ matrix defined by
 
 $$
-v_k \;\xrightarrow{\;T\;}\; A_{1,k}\, w_1 + \cdots + A_{m,k}\, w_m
+v_k \;\xrightarrow{\;T\;}\;
+\begin{array}{l}
+\phantom{+\ } A_{1,k}\, w_1 \\
+\quad \vdots \\
++\ A_{m,k}\, w_m
+\end{array}
 \qquad\longrightarrow\qquad
 \begin{bmatrix} A_{1,k} \\ \vdots \\ A_{m,k} \end{bmatrix} = \text{column } k \text{ of } \mathcal{M}(T)
 $$
@@ -333,29 +338,13 @@ $$(AB)_{\cdot,k} = A\, B_{\cdot,k}, \qquad (AB)_{j,\cdot} = A_{j,\cdot}\, B$$
 
 $$
 \begin{aligned}
-Ab &= b_1\, A_{\cdot,1} + \cdots + b_n\, A_{\cdot,n} \\
-aB &= a_1\, B_{1,\cdot} + \cdots + a_n\, B_{n,\cdot}
+Ab &= b_1\, A_{\cdot,1} + \cdots + b_n\, A_{\cdot,n} && \text{linear combination of columns} \\
+aB &= a_1\, B_{1,\cdot} + \cdots + a_n\, B_{n,\cdot} && \text{linear combination of rows}
 \end{aligned}
 $$
 
 Matrix multiplication is **not commutative** ($AB \ne BA$),
 but it **is distributive and associative**.
-
----
-
-### $Ab$ = linear combination of columns
-
-$A$ : $m$-by-$n$; $\ b = \begin{bmatrix} b_1 \\ \vdots \\ b_n \end{bmatrix}$, then
-
-$$
-Ab
-= \begin{bmatrix} \sum_k A_{1,k}\, b_k \\ \vdots \\ \sum_k A_{m,k}\, b_k \end{bmatrix}
-= \underbrace{\begin{bmatrix} A_{1,1} \\ \vdots \\ A_{m,1} \end{bmatrix}}_{A_{\cdot,1}} b_1
-+ \cdots +
-\underbrace{\begin{bmatrix} A_{1,n} \\ \vdots \\ A_{m,n} \end{bmatrix}}_{A_{\cdot,n}} b_n
-$$
-
-$\therefore$ linear combination of columns
 
 ---
 
