@@ -131,8 +131,7 @@ If $\dim V > \dim W$, then a linear map $T : V \to W$ is **not injective** (fini
 
 $$
 \begin{array}{lccc}
- & & & \small\text{“}\operatorname{null} T\text{”} \\
-\text{basis of } V : & \{u_1 \dots u_m\} & \cup & \{\dots u_n\} \\
+\text{basis of } V : & \{u_1 \dots u_m\} & \cup & \overbrace{\{\dots u_n\}}^{\text{“}\operatorname{null} T\text{”}} \\
  & \downarrow & & \downarrow \\
 \text{basis of } W : & \{Tu_1 \dots Tu_m\} & & \{\}
 \end{array}
