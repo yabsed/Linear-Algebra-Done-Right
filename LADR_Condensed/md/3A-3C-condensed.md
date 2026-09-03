@@ -284,7 +284,14 @@ $$
 
 Linear maps $U \xrightarrow{\;T\;} V \xrightarrow{\;S\;} W$ with $\mathcal{M}(S) = A$, $\mathcal{M}(T) = B$:
 
-$$u_k \;\xrightarrow{\;T\;}\; B_{1,k}\, v_1 + \cdots + B_{n,k}\, v_n$$
+$$
+u_k \;\xrightarrow{\;T\;}\;
+\begin{array}{l}
+\phantom{+\ } B_{1,k}\, v_1 \\
+\quad \vdots \\
++\ B_{n,k}\, v_n
+\end{array}
+$$
 
 $$\Big\downarrow\ S$$
 
@@ -396,7 +403,7 @@ $A$ : $m$-by-$n$ $\leadsto$ $A^t$ : $n$-by-$m$ (transpose) with $(A^t)_{k,j} = A
 Suppose
 
 1. $m$-by-$n$ matrix $A$ (in $F$)
-2. column rank of $A \ge 1$
+2. $c :=$ column rank of $A \ge 1$
 
 then there exist an $m$-by-$c$ matrix $C$ (in $F$) and a $c$-by-$n$ matrix $R$ (in $F$) with
 
@@ -417,10 +424,14 @@ $$
 \end{aligned}
 $$
 
-**Step 1. Construct $C$** — reduce the columns $A_{\cdot,1}, \dots, A_{\cdot,n}$ into a basis of their span;
+**Step 1. Construct $C$**
+
+reduce the columns $A_{\cdot,1}, \dots, A_{\cdot,n}$ into a basis of their span;
 the basis has length $c$ — column rank.
 
-**Step 2. Construct $R$** — each $A_{\cdot,k}$ is a linear combination of the columns of $C$:
+**Step 2. Construct $R$**
+
+each $A_{\cdot,k}$ is a linear combination of the columns of $C$:
 
 $$A_{\cdot,k} = C\, R_{\cdot,k} \quad\text{---}\quad R_{\cdot,k} = \text{coefficients of the linear combination}$$
 

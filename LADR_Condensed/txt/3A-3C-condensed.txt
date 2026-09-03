@@ -311,18 +311,13 @@ A^t : n-by-m (transpose) with (A^t)(k,j) = A(j,k)
 
 ===================================================
 
-suppose  (i)  m-by-n matrix A (in F) 
-        (ii) column rank of A >= 1
+suppose  (i)      m-by-n matrix A (in F) 
+        (ii) c:= column rank of A >= 1
 
 then exist m-by-c matrix C (in F)
            c-by-n matrix R (in F)
 
 with A = CR 
-
-      n           c         n
-   [     ]       [ ]
- m [  A  ]  =  m [C]  [     R     ] c
-   [     ]       [ ]
 
 each column of A = combination of the c columns of C
 each    row of A = combination of the c    rows of R

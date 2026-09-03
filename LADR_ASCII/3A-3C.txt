@@ -437,8 +437,8 @@ A^t : n-by-m (transpose) with (A^t)(k,j) = A(j,k)
 
 ===================================================
 
-suppose  (i)  m-by-n matrix A (in F) 
-        (ii) column rank of A >= 1
+suppose  (i)      m-by-n matrix A (in F) 
+        (ii) c:= column rank of A >= 1
 
 then exist m-by-c matrix C (in F)
            c-by-n matrix R (in F)
