@@ -281,5 +281,54 @@ isomorphic spaces have equal dimension
 
 ======================================
 
+Change of basis
 
-                             
+======================================
+
+linear map T: V->V and one basis used twice 
+
+M(T, (v1 ... vn)) := M(T, (v1 ... vn), (v1 ... vn))
+
+======================================
+
+(identity matrix)
+
+identity matrix : I ∈ F^(n,n) 
+
+                  with I(j,k) = 1 if (j = k) else 0 
+
+for any square A 
+        of the same size : AI = IA = A 
+
+the symbol I denotes 
+           both the identity operator and matrix
+
+any single basis of V, M(I) = I 
+
+======================================
+
+(invertible matrix)
+
+square A is invertible iff exists square B (same size)
+                       with AB = BA = I 
+
+such B is unique, written A^(-1)
+
+======================================
+
+ (i) (A^-1)^-1 = A
+ 
+     since (A^-1)(A) = A(A^-1) = I 
+
+(ii)   if A, C invertible of the same size 
+     then (AC) is invertible with (AC)^(-1) = (C^-1)(A^-1)
+
+     since (AC)(C^-1 A^-1) = A(C C^-1)A^-1
+                           = A(     I)A^-1
+                           = A        A^-1 = I 
+
+     likewise (C^-1 A^-1)(AC) = I 
+
+======================================
+
+
