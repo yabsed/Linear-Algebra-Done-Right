@@ -1,38 +1,39 @@
-3E - Products and Quotients of Vector Spaces 
+3E - Products and Quotients of Vector Spaces
 
 all spaces appearing in one product
-are over the same field F
+are over the same field F 
 
-======================================
+====================================
 
-vector spaces V_1 ... V_m over F
+vector spaces V_1 ... V_m over F 
 
-  (i) product
-     
-      V_1 x ... x V_m = {(v_1 ... v_m) : vk ∈ Vk}
+(i) product 
 
- (ii) componentwise operations 
-     
-        (u_1 ... u_m) + (v_1 ... v_m) = (  u_1 + v_1 ...   u_m + v_m)
-     
-      a (v_1 ... v_m)                 = (a u_1       ... a u_m)
+V_1 x ... V_m = {(v_1 ... v_m) : v_k ∈ V_k}
 
+(ii) componentwise operations 
 
-(iii) V1 x ... x Vm is a vector space over F 
+(u_1 ... u_m) +   (v_1 ... v_m) = ( u_1 +   v_1 ... u_m +   v_m )
 
-      additive identity : (0 ... 0) 
+                a (v_1 ... v_m) = (       a v_1 ...       a v_m ) 
 
-      additive  inverse : (-v_1 ... -v_m)
+====================================
 
-======================================
+(iii) V_1 x ... V_m is a vector space over F 
 
-R^2 x R^3 != R^5 (not equal)
+additive identity : (   0 ...    0)
+
+additive  inverse : (-v_1 ... -v_m)
+
+====================================
+
+R^2 x R^3 != R^5 (not eqaul)
 
 R^2 x R^3 ≅ R^5 (isomorphic)
 
 with ((x_1, x_2), (x_3, x_4, x_5)) ---> (x_1, x_2, x_3, x_4, x_5)
 
-being linear and bijective 
+being linear & bijective 
 
 ======================================
 
@@ -55,9 +56,3 @@ basis of P_2(R) x R^2 = (  1, (0,0)) ---> polynomial
                         (  0, (0,1)) 
 
 ======================================
-
-Products and Direct Sums 
-
-
-     
-
