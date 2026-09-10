@@ -56,3 +56,27 @@ basis of P_2(R) x R^2 = (  1, (0,0)) ---> polynomial
                         (  0, (0,1)) 
 
 ======================================
+
+V_1 ... V_m subspaces of V ("finite-dimensional")
+
+define linear map Γ
+
+               Γ
+(v_1 ... v_m) ---> v_1 + ... + v_m
+   
+  "product"          "direct sum" 
+  
+
+V_1 + ... + V_m is direct sum iff Γ is    injective  --- null Γ = {0}
+                                       & surjective  --- def of direct sum 
+
+with V finite-dimensional provided then 
+
+V_1 + ... + V_m is direct sum iff Γ is    injective 
+                                       & surjective        
+                              iff   dim(V1  + ... +     Vm)
+                                  = dim(V1  x ... x     Vm) --- null Γ = {0}
+                                  = dim(V1) + ... + dim(Vm) --- basis in kth slot
+
+======================================
+
