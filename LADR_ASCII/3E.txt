@@ -80,3 +80,209 @@ V_1 + ... + V_m is direct sum iff Γ is    injective
 
 ======================================
 
+alternative proof for m = 2 
+
+  U_1 + U_2 is direct sum iff U_1 ∩ U_2 = {0}   --- 1.46 
+
+  dim(U_1 + U_2) = dim U_1 + dim U_2 
+                            - dim(U_1 ∩ U_2)    --- 2.43 
+
+======================================
+
+Quotient Spaces 
+
+======================================
+
+v ∈ V, U ⊆ V (subset)
+
+v + U = {v + u : u ∈ U}
+
+a set of this form is a translate of U 
+
+======================================
+
+U = {(x, 2x) : x ∈ R} ⊆ R^2  --- line of slope 2 through   0 
+
+(17,20) + U                  --- line of slope 2 through (17,20)
+                                 = U moved right by 7 
+                                 ∵ (10,20) ∈ U 
+
+translates of line  U ⊆ R^2 through 0 = lines  parallel to U 
+translates of plane U ⊆ R^3 through 0 = planes parallel to U 
+
+======================================
+
+U subspace of V 
+
+V/U = {v + U : v ∈ V}   --- set of all translates of U 
+
+R^2 / {(x,2x)}       = all lines  of slope 2 
+R^3 / (line  thru 0) = all lines  parallel to it 
+R^3 / (plane thru 0) = all planes parallel to it 
+
+======================================
+
+two translates of a subspace are equal or disjoint 
+
+U subspace of V ; v, w ∈ V 
+
+  (i) v - w ∈ U 
+ (ii) v + U = w + U 
+(iii) (v + U) ∩ (w + U) != ∅ (nonempty)
+
+are equivalent 
+
+======================================
+
+Proof. 
+
+(i) ⇒ (ii)
+
+v + u = w + ((v - w) + u) ∈ w + U   --- v + U ⊆ w + U (∀u ∈ U)
+
+w - v = -(v - w) ∈ U                --- w + U ⊆ v + U (symmetric)
+
+(ii) ⇒ (iii)
+
+equal translates are nonempty       --- so they intersect 
+
+(iii) ⇒ (i)
+
+v + u_1 = w + u_2   (u_1, u_2 ∈ U)
+
+v - w   =   u_2 - u_1 ∈ U 
+
+======================================
+
+operations on V/U  (v, w ∈ V ; a ∈ F)
+
+(v + U) + (w + U) = (v + w) + U 
+
+      a (v + U)   = (a v)   + U 
+
+======================================
+
+V/U is a vector space 
+
+additive identity :    0  + U (= U)
+additive  inverse : (-v)  + U 
+
+only issue : representatives of a translate are not unique 
+             ∴ operations must be well defined 
+
+======================================
+
+Proof. 
+
+suppose v_1 + U = v_2 + U 
+        w_1 + U = w_2 + U 
+
+then    v_1 - v_2 ∈ U             --- 3.101 
+        w_1 - w_2 ∈ U 
+
+(addition)
+
+  (v_1 + w_1) - (v_2 + w_2)
+= (v_1 - v_2) + (w_1 - w_2) ∈ U   --- U closed under addition 
+
+∴ (v_1 + w_1) + U = (v_2 + w_2) + U 
+
+(scalar multiplication)
+
+a(v_1 - v_2) = a v_1 - a v_2 ∈ U  --- U closed under scalar mult 
+
+∴ (a v_1) + U = (a v_2) + U 
+
+remaining axioms follow from those of V via representatives 
+
+======================================
+
+quotient map (U subspace of V)
+
+     π 
+V -------> V/U  ;  π(v) = v + U 
+
+π is linear --- directly from the operations on V/U 
+
+π(v + w) = (v + w) + U = (v + U) + (w + U)
+π(  a v) = (  a v) + U = a (v + U)
+
+(π depends on both U and V ; the notation omits them)
+
+======================================
+
+dimension of a quotient space 
+
+V finite-dimensional, U subspace of V 
+
+dim V/U = dim V - dim U 
+
+======================================
+
+Proof. 
+
+ null π : π(v) = 0 + U 
+      iff v + U = 0 + U 
+      iff v ∈ U                   --- 3.101 
+        ∴ null  π = U 
+
+range π = V/U                     --- def of V/U 
+
+dim V = dim null π + dim range π  --- Fundamental Theorem 
+      = dim U      + dim V/U 
+
+======================================
+
+T~ ("T tilde") for T ∈ L(V,W)
+
+              T~ 
+V/(null T) -------> W  ;  T~(v + null T) = Tv 
+
+T~ well-defined 
+
+  u + null T = v + null T 
+⇒ u - v ∈ null T                --- 3.101 
+⇒ T(u - v) = 0 
+⇒ Tu = Tv 
+
+T~ linear --- ops on V/U & linearity of T 
+
+======================================
+
+null space and range of T~ 
+
+T ∈ L(V,W) ; π : V -> V/(null T) quotient map 
+
+(a) T~ ∘ π   = T 
+(b) T~ is injective 
+(c) range T~ = range T 
+(d) V/(null T) ≅ range T 
+
+======================================
+
+Proof. 
+
+(a)      π                 T~ 
+     v -----> v + null T -----> Tv 
+
+(b)   T~(v + null T) = 0 
+    ⇒ Tv = 0 
+    ⇒ v ∈ null T 
+    ⇒ v + null T = 0 + null T   --- 3.101 
+
+    ∴ null T~ = {0 + null T}    --- injective 
+
+(c) both ranges = {Tv : v ∈ V}  --- def of T~ 
+
+(d) T~ regarded as a map into range T 
+    is  injective --- (b)
+      & surjective --- (c)
+    ∴ isomorphism 
+
+======================================
+
+T~ is T with its domain modified 
+just enough to become injective 
+
+======================================
+
